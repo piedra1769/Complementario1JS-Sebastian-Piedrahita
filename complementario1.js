@@ -25,23 +25,24 @@ switch (opcion) {
     case 2: 
         pais = prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
 
-        switch (pais) {
+        while (pais!='c') {
+            switch (pais) {
             
-            case 'c': 
-            alert ('¡Felicitaciones!');
-            break;
+                case 'a': 
+                alert ('Estás cerca');
+                pais = prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
+                break;
 
-            case 'a': 
-            alert ('Estás cerca');
-            prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
+                case 'b':
+                alert ('No tan lejos');     
+                pais = prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
+                break;
 
-            case 'b':
-            alert ('No tan lejos');     
-            prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
-
-            default:
-            alert ('Esa no es una opción');
-            prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
-        }
-           
-}
+                default:
+                alert ('Esa no es una opción');
+                pais = prompt('¿En qué país en el que queda el Chimborazo? \n a. Colombia \n b. Argentina \n c. Ecuador');
+                break;
+            }
+        }  
+        alert ('¡Felicitaciones!')
+    }
